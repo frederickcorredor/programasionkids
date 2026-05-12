@@ -273,6 +273,23 @@ position: absolute;
     border: 1px solid rgba(126,211,33,0.4);
     border-radius: 16px;
     padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+
+      div{
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        img{
+          width: 60%;
+        }
+      }
   }
   .solution-box h2 {
     font-family: 'Bebas Neue', sans-serif;
@@ -586,9 +603,7 @@ position: absolute;
     <!-- Problema -->
     <div class="problem-box">
       <div class="img-placeholder prob-character" id="img-prob-char">
-        <input type="file" accept="image/*" onchange="loadImage(this, 'img-prob-char')">
-        <div class="icon" style="font-size:20px">😤</div>
-        <img id="preview-img-prob-char" alt="Niño problema">
+        <img id="preview-img-prob-char" src="elproblema.webp" alt="Niño problema">
       </div>
       <h2>⚠️ EL PROBLEMA</h2>
       <div class="problem-item">
@@ -610,13 +625,19 @@ position: absolute;
 
     <!-- Solución -->
     <div class="solution-box">
-      <div class="img-placeholder sol-character" id="img-sol-char">
-        <input type="file" accept="image/*" onchange="loadImage(this, 'img-sol-char')">
-        <div class="icon" style="font-size:20px">💡</div>
-        <img id="preview-img-sol-char" alt="Niño solución">
+      <div style="width: 100%;position: absolute;top: -18px;"><h3 style="background-color: var(--cyan);padding: 6px 12px;border-radius: 12px;">CON ESTE PROGRAMA DESARROLLA</h3></div>
+      <div>
+        <img src="cerebro.webp" alt="">
+        <h4 style="text-align: center;">Lógica y pensamiento crítico</h4>
       </div>
-      <h2>💡 LA SOLUCIÓN</h2>
-      <p>Aprende creando proyectos reales mientras desarrolla habilidades que le servirán toda la vida.</p>
+      <div>
+        <img src="cohete.webp" alt="">
+        <h4 style="text-align: center;">Creatividad e Innovación</h4>
+      </div>
+      <div>
+        <img src="blanco.webp" alt="">
+        <h4 style="text-align: center;">Concentración y Disciplina</h4>
+      </div>
     </div>
 
   </div>
