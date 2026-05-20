@@ -121,6 +121,11 @@
     min-width: 300px;
     font-size: 12px;
   }
+  /* inline: color: var(--verde); font-weight: 800; */
+  .hero-subtitle span {
+    color: var(--verde);
+    font-weight: 800;
+  }
   .hero-right {
     position: relative;
     display: flex;
@@ -267,6 +272,16 @@ position: absolute;
     border-radius: 10px;
     margin-bottom: 16px;
   }
+  /* inline: width: 25% en .prob-character */
+  #img-prob-char {
+    width: 25%;
+  }
+  /* inline: width: 64%; position: relative; z-index: 2; en el div hermano */
+  .prob-content {
+    width: 64%;
+    position: relative;
+    z-index: 2;
+  }
   .arrow-divider {
     display: flex;
     align-items: center;
@@ -311,6 +326,26 @@ position: absolute;
     height: 80px;
     border-radius: 10px;
     margin-bottom: 16px;
+  }
+  /* inline: width:100%; position:absolute; top:-18px; en el div del header de solución */
+  .solution-header {
+    width: 100%;
+    position: absolute;
+    top: -18px;
+  }
+  /* inline: background-color:var(--cyan); padding:6px 12px; border-radius:12px; en el h3 */
+  .solution-header h3 {
+    background-color: var(--cyan);
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
+  /* inline: text-align:center en los h4 dentro de solution-box */
+  .solution-box h4 {
+    text-align: center;
+  }
+  /* inline: font-size:11px en .label dentro de #img-teacher */
+  #img-teacher .label {
+    font-size: 11px;
   }
 
   /* ── HABILIDADES ── */
@@ -609,7 +644,7 @@ position: absolute;
 
   </div>
             <div class="hero-subtitle">
-        NO ES SOLO PROGRAMACIÓN, <span style="color: var(--verde);font-weight: 800;">SON HABILIDADES PARA LA VIDA</span>
+        NO ES SOLO PROGRAMACIÓN, <span>SON HABILIDADES PARA LA VIDA</span>
       </div>
 </section>
 
@@ -619,10 +654,10 @@ position: absolute;
 
     <!-- Problema -->
     <div class="problem-box">
-      <div class="prob-character" id="img-prob-char" style="width: 25%;">
+      <div class="prob-character" id="img-prob-char">
         <img id="preview-img-prob-char" src="elproblema.webp" alt="Niño problema">
       </div>
-     <div style="width: 64%;position: relative; z-index: 2;">
+     <div class="prob-content">
        <h2>⚠️ EL PROBLEMA</h2>
       <div class="problem-item">
         <div class="x-icon">✕</div>
@@ -644,20 +679,20 @@ position: absolute;
 
     <!-- Solución -->
     <div class="solution-box">
-      <div style="width: 100%;position: absolute;top: -18px;"><h3 style="background-color: var(--cyan);padding: 6px 12px;border-radius: 12px;">CON ESTE PROGRAMA DESARROLLA</h3></div>
+      <div class="solution-header"><h3>CON ESTE PROGRAMA DESARROLLA</h3></div>
       <div>
         <img src="cerebro.webp" alt="">
-        <h4 style="text-align: center;">Lógica</h4>
+        <h4>Lógica</h4>
         <p>Resuelve problemas de forma inteligente.</p>
       </div>
       <div>
         <img src="cohete.webp" alt="">
-        <h4 style="text-align: center;">Creatividad</h4>
+        <h4>Creatividad</h4>
         <p>Convierte ideas en proyectos reales.</p>
       </div>
       <div>
         <img src="blanco.webp" alt="">
-        <h4 style="text-align: center;">Concentración y Disciplina</h4>
+        <h4>Concentración y Disciplina</h4>
         <p>Mejora su enfoque y constancia.</p>
       </div>
     </div>
@@ -728,7 +763,7 @@ position: absolute;
         <div class="img-placeholder teacher-img" id="img-teacher">
           <input type="file" accept="image/*" onchange="loadImage(this, 'img-teacher')">
           <div class="icon">👨‍💻</div>
-          <div class="label" style="font-size:11px">Foto<br>del profesor</div>
+          <div class="label">Foto<br>del profesor</div>
           <img id="preview-img-teacher" alt="Profesor">
         </div>
 
